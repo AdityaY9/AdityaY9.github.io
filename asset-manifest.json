@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.e7b48b76.css",
+    "main.js": "/Portfolio/static/js/main.5d047e28.js",
+    "static/js/770.b477def6.chunk.js": "/Portfolio/static/js/770.b477def6.chunk.js",
+    "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/Aditya.png": "/Portfolio/static/media/Aditya.768ea1ec88309166bb9a.png",
+    "static/media/logo.gif": "/Portfolio/static/media/logo.68269769048a1234152a.gif",
+    "static/media/ChessAI.png": "/Portfolio/static/media/ChessAI.b020241ab4f81b19f6ed.png",
+    "static/media/WhyT.png": "/Portfolio/static/media/WhyT.4e639be4bb5613261f63.png",
+    "static/media/GeneticAlgorithm.png": "/Portfolio/static/media/GeneticAlgorithm.8aa07b3cdb005280b084.png",
+    "static/media/Aditya's_Resume.pdf": "/Portfolio/static/media/Aditya's_Resume.d453eff4d246e2f612e8.pdf",
+    "static/media/avatar.png": "/Portfolio/static/media/avatar.1479c13a9549b32d82e1.png",
+    "static/media/about.png": "/Portfolio/static/media/about.aee0f771fbfc1e7b8fa8.png",
+    "static/media/home-bg.jpg": "/Portfolio/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
+    "static/media/pre.svg": "/Portfolio/static/media/pre.4410c5baaa673cc131da.svg",
+    "index.html": "/Portfolio/index.html",
+    "main.e7b48b76.css.map": "/Portfolio/static/css/main.e7b48b76.css.map",
+    "main.5d047e28.js.map": "/Portfolio/static/js/main.5d047e28.js.map",
+    "770.b477def6.chunk.js.map": "/Portfolio/static/js/770.b477def6.chunk.js.map",
+    "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7b48b76.css",
+    "static/js/main.5d047e28.js"
+  ]
+}
