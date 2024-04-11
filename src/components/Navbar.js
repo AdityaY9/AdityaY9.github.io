@@ -115,7 +115,7 @@ function NavBar() {
                 {/* <AiFillStar style={{ fontSize: "1.1em" }} /> */}
               </Button>
             </Nav.Item>
-            <Nav.Item className="fork-btn">
+            <Nav.Item className="fork-btn" padding-right="50px">
               <Button
                 href="https://www.instagram.com/aditya_.y9/"
                 target="_blank"
@@ -125,6 +125,12 @@ function NavBar() {
                 {/* <AiFillStar style={{ fontSize: "1.1em" }} /> */}
               </Button>
             </Nav.Item>
+            <div class="counter">
+              <h6>Visitor Count</h6>
+              <a target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=9805350&style=0036&nbdigits=5&type=page&initCount=0" title="Bohot hogye yaar!" Alt="Visit counter For Websites"   border="2 solid #000000" padding-left="50px" width="80px" height="30px"></img> 
+              </a>    
+            </div>
             
           </Nav>
         </Navbar.Collapse>

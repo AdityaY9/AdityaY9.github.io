@@ -14,13 +14,60 @@ html {
   --imp-text-color: #c770f0;
 }
 
+h6{
+  color: white !important;
+  padding-left: 10px !important;
+}
+
+img {
+  border-color: #c770f0 !important;
+}
+
+img:hover {
+  animation: shake infinite 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+.test{
+  background-color: #1b1a2e;
+  color: white;
+}
+
+.body{
+  background-color: #1b1a2e;
+  color: white;
+}
+
 .purple {
   color: var(--imp-text-color) !important;
   white-space: nowrap;
 }
 
+.h6 {
+  color: white !important;
+}
+
 .red {
   color: red !important;
+}
+
+.h6{
+  color: white !important;
 }
 
 .yellow {
@@ -44,7 +91,9 @@ button:focus {
   height: 100%;
   z-index: 999999;
   background-color: #0c0513;
-  background-image: url(./Assets/pre.svg);
+  background-image: url(./Assets/logo.gif);
+  background-size: 250px 100px;
+  image-resolution: 200dpi;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -159,6 +208,7 @@ button:focus {
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
+    color: white !important;
   }
 }
 .navbar-brand {
@@ -726,7 +776,7 @@ button:focus {
 .animate-like {
   animation-name: likeAnimation;
   animation-fill-mode: forwards;
-  animation-duration: 0.85s;
+  animation-duration: 5s;
 }
 @keyframes likeAnimation {
   0% {
@@ -753,10 +803,9 @@ button:focus {
 
 .fork-btn-inner-linkedin:hover {
   transform: translateY(5px) !important;
-  background-color: blue !important;
+  background-color: #0077b5 !important;
   border-color: white !important;
   transform: scale(1.2) !important;
-  /* animation:infinite 0.5s likeAnimation; */
 }
 
 .fork-btn-inner-github:hover {
@@ -767,9 +816,14 @@ button:focus {
   /* animation:infinite 0.5s likeAnimation; */
 }
 
-.fork-btn-inner-instagram:hover {
-  background-color: #e1306c !important;
+.fork-btn-inner-instagram:hover{
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
   border-color: white !important;
+  border-color: red;
   transform: scale(1.2) !important;
   /* animation:infinite 0.5s likeAnimation; */
 }
