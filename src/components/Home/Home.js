@@ -7,7 +7,7 @@ import Type from "./Type";
 
 function Home() {
   return (
-    <section>
+    <section>z
       
       <Container fluid className="home-section" id="home">
         <Particle />
