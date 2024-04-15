@@ -43,6 +43,8 @@ img:hover {
 
 
 
+
+
 .test{
   background-color: #1b1a2e;
   color: white;
@@ -92,13 +94,28 @@ button:focus {
   z-index: 999999;
   background-color: #0c0513;
   background-image: url(./Assets/logo.gif);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: expandfromcenter 2s linear 0s forwards;
   background-size: 250px 100px;
   image-resolution: 200dpi;
   background-repeat: no-repeat;
   background-position: center;
 }
 
+@keyframes expandfromcenter {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 #preloader-none {
+  animation: fadeOut 0.5s linear 0s forwards;
   opacity: 0;
 }
 
