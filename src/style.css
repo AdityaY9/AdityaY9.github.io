@@ -98,7 +98,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: expandfromcenter 2s linear 0s forwards;
+  animation: expandfromcenter 4s linear 0s infinite;
   background-size: 250px 100px;
   image-resolution: 200dpi;
   background-repeat: no-repeat;
@@ -109,13 +109,49 @@ button:focus {
   0% {
     opacity: 100;
   }
+  10%{
+    transform: scale(1.1);
+  }
+  20%{
+    transform: scale(1.2);
+
+  }
+  30%{
+    transform: scale(1.3);
+
+  }
+  40%{
+    transform: scale(1.4);
+
+  }
+  50%{
+    transform: scale(1.5);
+
+  }
+  60%{
+    transform: scale(1.6);
+
+  }
+  70%{
+    transform: scale(1.7);
+
+  }
+  80%{
+    transform: scale(1.8);
+
+  }
+  90%{
+    transform: scale(1.9);
+
+  }
   100% {
+    transform: scale(2);
     opacity: 0;
   }
 }
 
 #preloader-none {
-  animation: fadeOut 0.5s linear 0s forwards;
+  animation: expandfromcenter 0.5s linear 0s forwards;
   opacity: 0;
 }
 
@@ -129,7 +165,8 @@ button:focus {
 /* --------- */
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 2px;
+
 }
 
 /* Track */
@@ -139,7 +176,7 @@ button:focus {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: rgba(255, 0, 242, 0.959);
   border-radius: 12px;
 }
 
