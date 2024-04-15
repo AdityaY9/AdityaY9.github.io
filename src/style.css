@@ -196,6 +196,21 @@ button:focus {
   backdrop-filter: blur(15px) !important;
 }
 
+
+
+
+@keyframes float {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 .navbar {
   position: fixed !important;
   transition: all 0.3s ease-out 0s !important;
@@ -397,6 +412,13 @@ button:focus {
 
 .main-name {
   color: #cd5ff8;
+  animation: float 6s infinite;
+}
+
+
+.home-content .sub-heading {
+  font-size: 1.5em !important;
+  padding-left: 50px !important;
 }
 
 .Typewriter__wrapper {

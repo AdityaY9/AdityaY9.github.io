@@ -7,7 +7,7 @@ import Type from "./Type";
 
 function Home() {
   return (
-    <section>z
+    <section>
       
       <Container fluid className="home-section" id="home">
         <Particle />
@@ -32,12 +32,14 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
+              <div className="home-pic">
               <img
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                style={{ maxHeight: "450px"}}
               />
+              </div>
             </Col>
           </Row>
         </Container>
