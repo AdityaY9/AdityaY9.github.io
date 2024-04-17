@@ -15,6 +15,7 @@ import {
   AiFillLinkedin,
   AiOutlineGithub,
   AiOutlineInstagram,
+  AiOutlineMail,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -122,6 +123,16 @@ function NavBar() {
                 className="fork-btn-inner-instagram"
               >
                 <AiOutlineInstagram style={{ fontSize: "1.5em" }} />{" "}
+                {/* <AiFillStar style={{ fontSize: "1.1em" }} /> */}
+              </Button>
+            </Nav.Item>
+            <Nav.Item className="fork-btn" padding-right="50px">
+              <Button
+                href="mailto:aditya@adityayedurkar.social,aditya.yedurkar@gmail.com"
+                target="_blank"
+                className="fork-btn-inner-mail"
+              >
+                <AiOutlineMail style={{ fontSize: "1.5em" }} />{" "}
                 {/* <AiFillStar style={{ fontSize: "1.1em" }} /> */}
               </Button>
             </Nav.Item>
