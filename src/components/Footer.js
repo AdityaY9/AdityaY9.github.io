@@ -5,18 +5,20 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-
+import { renderConfetti } from "./confetti.js";
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   return (
     <Container fluid className="footer">
       <Row>
-        <Col md="4" className="footer-copywright">
-          <h3>Designed with <span className="red">
-            <Button className="fork-btn-inner" width="1px" height="1px">❤️</Button>
-            </span> by <span className="purple">Aditya Yedurkar</span> for <span className="purple">Aditya Yedurkar</span>!</h3>
-        </Col>
+      <Col md="4" className="footer-copywright">
+      <h3>
+        Designed with <span className="red">
+          <Button className="fork-btn-inner" width="1px" height="1px" onClick={renderConfetti}>❤️</Button>
+        </span> by <span className="purple">Aditya Yedurkar</span> for <span className="purple">Aditya Yedurkar</span>!
+      </h3>
+    </Col>
         <Col md="4" className="footer-copywright">
         </Col>
         <Col md="4" className="footer-body">
