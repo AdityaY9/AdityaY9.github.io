@@ -1,14 +1,20 @@
+
+
 import confetti from "canvas-confetti";
 
-
-function renderConfetti() {
+function renderConfetti(event) {
   const duration = 5 * 1000;
   const animationEnd = Date.now() + duration;
   const defaults = { startVelocity: 10, spread: 360, ticks: 60, zIndex: 0 };
 
   function randomInRange(min, max) {
     return Math.random() * (max - min) + min;
+
   }
+
+  const buttonRect = event.target.getBoundingClientRect();
+  const buttonX = (buttonRect.left + buttonRect.right) / 2 / window.innerWidth;
+  const buttonY = (buttonRect.top + buttonRect.bottom) / 2 / window.innerHeight;
 
   const interval = setInterval(function () {
     const timeLeft = animationEnd - Date.now();
@@ -18,19 +24,32 @@ function renderConfetti() {
     }
 
     const particleCount = 200 * (timeLeft / duration);
-    // since particles fall down, start a bit higher than random
+    const heartParticleCount = Math.floor(particleCount * 0.5); // Adjust ratio as desired
+
+    // Generate regular confetti particles
     confetti(
       Object.assign({}, defaults, {
-        particleCount,
-        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+        particleCount: particleCount - heartParticleCount,
+        origin: { x: randomInRange(0.1, 0.9), y: randomInRange(0.1, 0.5) }, // Random origin within canvas
       })
     );
-    confetti(
-      Object.assign({}, defaults, {
-        particleCount,
-        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-      })
-    );
+
+    // Generate heart-shaped confetti particles
+    for (let i = 0; i < heartParticleCount; i++) {
+      const x = buttonX + randomInRange(-0.1, 0.1);
+      const y = buttonY + randomInRange(-0.1, 0.1);
+      const size = randomInRange(0.4, 0.7);
+      
+      confetti({
+        particleCount: 1,
+        angle: 60,
+        spread: 55,
+        origin: { x, y },
+        colors: ['#ff0000'],
+        shapes: ['heart'],
+        scalar: size
+      });
+    }
   }, 250);
 }
 
