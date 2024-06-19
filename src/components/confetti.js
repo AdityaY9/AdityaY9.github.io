@@ -1,5 +1,3 @@
-
-
 import confetti from "canvas-confetti";
 
 function renderConfetti(event) {
