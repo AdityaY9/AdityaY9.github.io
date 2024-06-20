@@ -7,14 +7,18 @@ function Type() {
       options={{
         strings: [
           "Software Developer",
-          "ML Enthusiast",
           "Machine Learning Engineer",
           "Web Developer",
           "Graphic Designer",
+          "GenAI Intern",
         ],
         autoStart: true,
         loop: true,
         deleteSpeed: 50,
+        // make animation smooth
+        delay: 50,
+        // make animation fast
+        speed: 50,
       }}
     />
   );

@@ -102,8 +102,7 @@ function NavBar() {
                 target="_blank"
                 className="fork-btn-inner-linkedin"
               >
-                <AiFillLinkedin style={{ fontSize: "1.5em" }} />{" "}
-                {/* <AiFillStar style={{ fontSize: "1.1em" }} /> */}
+                <AiFillLinkedin style={{ fontSize: "1.2em" }} />{" "}
               </Button>
             </Nav.Item>
             <Nav.Item className="fork-btn">
@@ -112,8 +111,7 @@ function NavBar() {
                 target="_blank"
                 className="fork-btn-inner-github"
               >
-                <AiOutlineGithub style={{ fontSize: "1.5em" }} />{" "}
-                {/* <AiFillStar style={{ fontSize: "1.1em" }} /> */}
+                <AiOutlineGithub style={{ fontSize: "1.2em" }} />{" "}
               </Button>
             </Nav.Item>
             <Nav.Item className="fork-btn" padding-right="50px">
@@ -122,24 +120,23 @@ function NavBar() {
                 target="_blank"
                 className="fork-btn-inner-instagram"
               >
-                <AiOutlineInstagram style={{ fontSize: "1.5em" }} />{" "}
-                {/* <AiFillStar style={{ fontSize: "1.1em" }} /> */}
+                <AiOutlineInstagram style={{ fontSize: "1.2em" }} />{" "}
               </Button>
             </Nav.Item>
-            <Nav.Item className="fork-btn" padding-right="50px">
+            <Nav.Item className="fork-btn" margin-right="100px">
               <Button
                 href="mailto:aditya@adityayedurkar.social,aditya.yedurkar@gmail.com"
                 target="_blank"
                 className="fork-btn-inner-mail"
               >
-                <AiOutlineMail style={{ fontSize: "1.5em" }} />{" "}
-                {/* <AiFillStar style={{ fontSize: "1.1em" }} /> */}
+                <AiOutlineMail style={{ fontSize: "1.2em"}} />{" "}
               </Button>
             </Nav.Item>
             <div class="counter">
-              <h6>Visitor Count</h6>
-              <a target="_blank">
-                <img src="https://hitwebcounter.com/counter/counter.php?page=9805350&style=0036&nbdigits=5&type=page&initCount=0" title="Bohot hogye yaar!" Alt="Visit counter For Websites"   border="2 solid #000000" padding-left="50px" width="80px" height="30px"></img> 
+              <h6 style={{ color: "white", fontSize: "0.5rem" , paddingleft:"100px", marginBottom:"0px" }}
+              >Visitor Count</h6>
+              <a target="_blank" style={{paddingleft:"100px"}}>
+                <img src="https://hitwebcounter.com/counter/counter.php?page=9805350&style=0036&nbdigits=5&type=page&initCount=0" title="Bohot hogye yaar!" Alt="Visit counter For Websites"   border="1 solid #000000" padding-left="100px" width="40px" height="15px" marginLeft="100px" ></img> 
               </a>    
             </div>
             

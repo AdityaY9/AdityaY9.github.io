@@ -13,11 +13,21 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
       <Col md="4" className="footer-copywright">
-      <h3>
-        Designed with <span className="red">
-          <Button className="fork-btn-inner" width="1px" height="1px" onClick={renderConfetti}>❤️</Button>
-        </span> by <span className="purple">Aditya Yedurkar</span> for <span className="purple">Aditya Yedurkar</span>!
-      </h3>
+      <h9 style={{ color: "white", fontSize: "0.8rem" }}>
+  Designed&nbsp;&nbsp;with&nbsp;&nbsp;
+  <span className="red">
+    <Button
+      className="fork-btn-inner"
+      width="0.1px"
+      height="0.1px"
+      onClick={renderConfetti}
+    >
+      ❤️
+    </Button>
+  </span>
+  &nbsp;&nbsp;by&nbsp;&nbsp;
+  <span className="purple">Aditya Yedurkar</span>!
+</h9>
     </Col>
         <Col md="4" className="footer-copywright">
         </Col>
@@ -41,7 +51,7 @@ function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <FaLinkedinIn />
+                <FaLinkedinIn style={{ fontSize: "1em" }}/>
               </a>
             </li>
             <li className="social-icons">
@@ -51,7 +61,7 @@ function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiFillInstagram />
+                <AiFillInstagram style={{ fontSize: "1em" }} />
               </a>
             </li>
           </ul>
