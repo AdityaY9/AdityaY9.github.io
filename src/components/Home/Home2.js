@@ -82,7 +82,7 @@ const Home2 = () => {
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <AiFillGithub size={32} />
+                  <AiFillGithub size={26} />
                 </a>
               </li>
               <li className="social-icons mx-3">
@@ -92,7 +92,7 @@ const Home2 = () => {
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <FaLinkedinIn size={32} />
+                  <FaLinkedinIn/>
                 </a>
               </li>
               <li className="social-icons mx-3">
@@ -102,7 +102,7 @@ const Home2 = () => {
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <AiFillInstagram size={32} />
+                  <AiFillInstagram size={25} />
                 </a>
               </li>
             </ul>
