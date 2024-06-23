@@ -4,6 +4,7 @@ import homeLogo from "../../Assets/Aditya.png";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import Tilt from "react-parallax-tilt";
 
 function Home() {
   return (
@@ -32,6 +33,7 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
+            <Tilt>
               <div className="home-pic">
               <img
                 src={homeLogo}
@@ -40,6 +42,7 @@ function Home() {
                 style={{ maxHeight: "450px"}}
               />
               </div>
+              </Tilt>
             </Col>
           </Row>
         </Container>
