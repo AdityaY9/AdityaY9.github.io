@@ -21,7 +21,10 @@ h6{
 
 img {
   border-color: #c770f0 !important;
+
 }
+
+
 
 
 
@@ -56,6 +59,7 @@ img {
 .purple {
   color: var(--imp-text-color) !important;
   white-space: nowrap;
+  text-shadow: 0 0 10px #7b02b4, 0 0 20px #7b02b4, 0 0 40px #7b02b4, 0 0 80px #7b02b4 !important;
 }
 
 .h6 {
@@ -280,6 +284,11 @@ button:focus {
 }
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
+}
+
+a{
+  position: relative !important;
+  z-index : 1 !important;
 }
 
 .logo {
@@ -609,7 +618,7 @@ button:focus {
   height: 100% !important;
 }
 .project-card-view:hover {
-  transform: scale(1.02) !important;
+  transform: scale(1.1) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
