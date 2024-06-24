@@ -22,8 +22,8 @@ function Projects() {
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white", textShadow: "10px 10px 40px #00c9ff", textDecoration: "none", textDecorationStyle: "double" }}>
-          Find Technical Details & More such Projects on my GitHub Profile <a href="https://github.com/Aditya-y9" style={{ color: "#00c3ff", cursor: "pointer", 
-            textShadow: "10px 10px 40px #00c9ff", textDecoration: "none", fontWeight: "bold", fontSize: 20, textDecorationStyle: "double"
+          Find Technical Details & More such Projects on my GitHub Profile <a href="https://github.com/Aditya-y9" style={{ color: "#00c3ff", cursor: "pointer",zIndex: "1", position: "relative",
+          textShadow: "10px 10px 40px #00c9ff", textDecoration: "none", fontWeight: "bold", fontSize: 20, textDecorationStyle: "double"
            }}>@Aditya-y9</a>
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>

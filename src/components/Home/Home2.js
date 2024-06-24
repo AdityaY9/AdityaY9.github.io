@@ -76,7 +76,7 @@ const Home2 = () => {
             </p>
             <ul className="home-about-social-links d-flex justify-content-center list-unstyled">
               <li className="social-icons mx-3">
-                <a
+                <a style={{color: "white"}}
                   href="https://github.com/Aditya-y9"
                   target="_blank"
                   rel="noreferrer"
