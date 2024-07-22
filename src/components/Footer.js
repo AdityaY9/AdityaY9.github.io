@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import {
+  AiFillCode,
   AiFillGithub,
   AiFillInstagram,
 } from "react-icons/ai";
@@ -33,6 +34,16 @@ function Footer() {
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
+            <li className="social-icons">
+              <a
+                href="https://codolio.com/profile/Aditya-y9"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillCode />
+              </a>
+            </li>
             <li className="social-icons">
               <a
                 href="https://github.com/aditya-y9"
