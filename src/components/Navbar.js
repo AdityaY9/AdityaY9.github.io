@@ -16,6 +16,8 @@ import {
   AiOutlineGithub,
   AiOutlineInstagram,
   AiOutlineMail,
+  AiFillCode,
+  AiFillCodeSandboxSquare,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -97,6 +99,16 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item> */}
+
+              <Nav.Item className="fork-btn">
+              <Button
+                href="https://codolio.com/profile/Aditya-y9"
+                target="_blank"
+                className="fork-btn-inner-linkedin"
+              >
+                <AiFillCode style={{ fontSize: "1.2em" }} />{" "}
+              </Button>
+            </Nav.Item>
 
             <Nav.Item className="fork-btn">
               <Button
