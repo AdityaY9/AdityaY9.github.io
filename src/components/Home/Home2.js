@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.png";
 import Tilt from "react-parallax-tilt";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { AiFillCode, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 const Home2 = () => {
@@ -75,6 +75,16 @@ const Home2 = () => {
               Let's <span className="purple">connect</span>!
             </p>
             <ul className="home-about-social-links d-flex justify-content-center list-unstyled">
+            <li className="social-icons mx-3">
+                <a style={{color: "white"}}
+                  href="https://codolio.com/profile/Aditya-y9"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiFillCode size={26} />
+                </a>
+              </li>
               <li className="social-icons mx-3">
                 <a style={{color: "white"}}
                   href="https://github.com/Aditya-y9"
