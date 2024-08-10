@@ -75,7 +75,7 @@ const Home2 = () => {
               Let's <span className="purple">connect</span>!
             </p>
             <ul className="home-about-social-links d-flex justify-content-center list-unstyled">
-            <li className="social-icons mx-3">
+            {/* <li className="social-icons mx-3">
                 <a style={{color: "white"}}
                   href="https://codolio.com/profile/Aditya-y9"
                   target="_blank"
@@ -84,7 +84,7 @@ const Home2 = () => {
                 >
                   <AiFillCode size={26} />
                 </a>
-              </li>
+              </li> */}
               <li className="social-icons mx-3">
                 <a style={{color: "white"}}
                   href="https://github.com/Aditya-y9"

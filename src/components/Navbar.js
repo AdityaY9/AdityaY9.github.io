@@ -100,7 +100,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item> */}
 
-              <Nav.Item className="fork-btn">
+              {/* <Nav.Item className="fork-btn">
               <Button
                 href="https://codolio.com/profile/Aditya-y9"
                 target="_blank"
@@ -108,7 +108,7 @@ function NavBar() {
               >
                 <AiFillCode style={{ fontSize: "1.2em" }} />{" "}
               </Button>
-            </Nav.Item>
+            </Nav.Item> */}
 
             <Nav.Item className="fork-btn">
               <Button

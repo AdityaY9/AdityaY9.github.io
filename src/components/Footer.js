@@ -34,7 +34,7 @@ function Footer() {
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
-            <li className="social-icons">
+            {/* <li className="social-icons">
               <a
                 href="https://codolio.com/profile/Aditya-y9"
                 style={{ color: "white" }}
@@ -43,7 +43,7 @@ function Footer() {
               >
                 <AiFillCode />
               </a>
-            </li>
+            </li> */}
             <li className="social-icons">
               <a
                 href="https://github.com/aditya-y9"
