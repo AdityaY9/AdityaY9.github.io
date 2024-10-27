@@ -1,3 +1,4 @@
+// FloatingChat.js
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import "./FloatingChat.css";
@@ -31,12 +32,8 @@ function FloatingChat() {
       setInput("");
 
       try {
-        // Send the user's prompt and User-Agent to the server
-        const response = await axios.post("/api/generate-content", { 
-          prompt: input,
-          userAgent: navigator.userAgent // Send the User-Agent string
-        });
-
+        // Send the user's prompt to the server
+        const response = await axios.post("/api/generate-content", { prompt: input });
         setMessages((prevMessages) => [
           ...prevMessages,
           { sender: "bot", text: response.data.response },
