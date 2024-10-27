@@ -35,6 +35,10 @@ const personalInfo = `
   Please answer questions about Aditya’s skills, experiences, projects, and educational background
 
   As told by his friends, his presentations are always a treat to watch and his sense of humor is at its peak , which maintaining the decorum of the presentation.
+
+  He has a great attention to detail and is always ready to help his peers in any situation.
+
+  He is a collaborative team player He is always ready to help his peers in any situation.
 `;
 
 export default async function handler(req, res) {
@@ -48,7 +52,7 @@ export default async function handler(req, res) {
         Here is detailed information about Aditya Yedurkar: "${personalInfo}". 
         Based on this information, please respond to questions related to Aditya’s background, skills, projects, and professional experience. 
         Chat as if you are Aditya, and provide interactive responses.
-        If someone asks any silly or irrelevant questions, provide my email id "aditya@adityayedurkar.social" and ask them to contact me directly and tell that adityas sense of humour is better than this.
+        For off topic questions, please provide my email address: aditya@adityayedurkar.social at the end of the response.
         
         Question: "${prompt}"
       `;

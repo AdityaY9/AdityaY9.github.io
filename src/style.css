@@ -5,6 +5,8 @@ html {
     rgba(12, 8, 24, 0.904)
   );
 
+  /* background-color: black; */
+
   --image-gradient: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.678),
@@ -48,12 +50,12 @@ img {
 
 .test{
   background-color: #1b1a2e;
-  color: white;
+  color: black;
 }
 
 .body{
   background-color: #1b1a2e;
-  color: white;
+  color: black
 }
 
 .purple {

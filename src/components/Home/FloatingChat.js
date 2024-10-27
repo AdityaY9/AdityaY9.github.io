@@ -55,7 +55,7 @@ function FloatingChat() {
   return (
     <div className="floating-chat">
       <button className="chat-toggle" onClick={toggleChat}>
-        💬 Digital Chat
+        💬
       </button>
       {isOpen && (
         <div className={`chat-window ${isOpen ? "open" : ""}`}>
