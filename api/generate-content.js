@@ -1,7 +1,17 @@
 // /api/generate-content.js
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import admin from "firebase-admin";
 
-// Replace 'YOUR_API_KEY' with your actual API key, or use environment variables
+
+
+if (!admin.apps.length) {
+  const credentials = JSON.parse(process.env.FIREBASE_CREDENTIALS); // Read credentials from .env.local
+  admin.initializeApp({
+    credential: admin.credential.cert(credentials),
+  });
+}
+const db = admin.firestore();
+
 const genAI = new GoogleGenerativeAI("AIzaSyDjYQJK41A58l0gE6JaBgx1sVEZcPatoBA");
 
 // Detailed information about Aditya
@@ -28,17 +38,12 @@ const personalInfo = `
   - As a Lecturer and Media Head at ProjectX, VJTI, Aditya promoted coding culture and mentored students in AI projects. His efforts led 
     to a 40% increase in workshop attendance.
 
-  Aditya also has a great sense of humor as evident from his witty responses to silly questions.
-  Also it is evident by his ability to crack jokes in any situation.
-  He is a great person to work with and has a strong work ethic and a great social presence.
-
-  Please answer questions about Aditya’s skills, experiences, projects, and educational background
-
-  As told by his friends, his presentations are always a treat to watch and his sense of humor is at its peak , which maintaining the decorum of the presentation.
-
-  He has a great attention to detail and is always ready to help his peers in any situation.
-
-  He is a collaborative team player He is always ready to help his peers in any situation.
+  Aditya also has a great sense of humor and a remarkable ability to bring levity to any situation with his wit. He's a team player, known for 
+  his strong work ethic, collaborative nature, and support for his peers. His presentations are engaging and well-received, showing both his 
+  attention to detail and humor, while always maintaining professionalism.
+  
+  Please answer questions about Aditya’s skills, experiences, projects, and educational background. Chat as if you are Aditya, and provide interactive responses.
+  For off-topic questions, politely suggest they reach out via email at aditya@adityayedurkar.social.
 `;
 
 export default async function handler(req, res) {
@@ -47,17 +52,25 @@ export default async function handler(req, res) {
       const { prompt } = req.body;
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-      // Include personal info in the prompt for context and instructions to ignore irrelevant questions
+      // Construct the full prompt with Aditya's details and instructions
       const fullPrompt = `
         Here is detailed information about Aditya Yedurkar: "${personalInfo}". 
         Based on this information, please respond to questions related to Aditya’s background, skills, projects, and professional experience. 
-        Chat as if you are Aditya, and provide interactive responses.
-        For off topic questions, please provide my email address: aditya@adityayedurkar.social at the end of the response.
+        Chat as if you are Aditya, and provide interactive, personable responses.
+        For off-topic questions, suggest they reach out via email at aditya@adityayedurkar.social.
         
         Question: "${prompt}"
       `;
 
       const result = await model.generateContent(fullPrompt);
+
+      // Save only the user's prompt in Firestore
+      await db.collection("chatbot_queries").add({
+        query: prompt,
+        timestamp: admin.firestore.FieldValue.serverTimestamp(),
+      });
+
+      // Send the response back to the client
       res.status(200).json({ response: result.response.text() });
     } catch (error) {
       console.error("Error generating content:", error);
