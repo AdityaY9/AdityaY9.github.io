@@ -5,7 +5,7 @@ import "./FloatingChat.css";
 function FloatingChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Hello! How can I help you today?" },
+    { sender: "bot", text: "Welcome to my website! Hope it helps you get to know me better." },
   ]);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef(null);
@@ -55,12 +55,12 @@ function FloatingChat() {
   return (
     <div className="floating-chat">
       <button className="chat-toggle" onClick={toggleChat}>
-        💬
+        💬 Digital Chat
       </button>
       {isOpen && (
         <div className={`chat-window ${isOpen ? "open" : ""}`}>
           <div className="chat-header">
-            <h6>Chat with Digital me!</h6>
+            <h6>Chat with my virtual version!</h6>
             <button className="close-chat" onClick={toggleChat}>×</button>
           </div>
           <div className="chat-messages">
@@ -80,7 +80,7 @@ function FloatingChat() {
               value={input}
               onChange={handleInputChange}
               onKeyPress={handleKeyPress}
-              placeholder="Type a message..."
+              placeholder="Feel free to ask me anything!"
             />
             <button onClick={sendMessage}>Send</button>
           </div>
