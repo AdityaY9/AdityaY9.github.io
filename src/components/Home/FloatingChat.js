@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import "./FloatingChat.css";
 
@@ -8,6 +8,7 @@ function FloatingChat() {
     { sender: "bot", text: "Hello! How can I help you today?" },
   ]);
   const [input, setInput] = useState("");
+  const messagesEndRef = useRef(null);
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
@@ -17,6 +18,12 @@ function FloatingChat() {
     setInput(e.target.value);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  };
+
   const sendMessage = async () => {
     if (input.trim()) {
       const newMessages = [...messages, { sender: "user", text: input }];
@@ -24,12 +31,7 @@ function FloatingChat() {
       setInput("");
 
       try {
-        // Send the prompt to the backend server
-        // Replace your existing axios POST request with this:
         const response = await axios.post("/api/generate-content", { prompt: input });
-
-
-        // Append bot response to the chat
         setMessages((prevMessages) => [
           ...prevMessages,
           { sender: "bot", text: response.data.response },
@@ -44,15 +46,21 @@ function FloatingChat() {
     }
   };
 
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages]);
+
   return (
     <div className="floating-chat">
       <button className="chat-toggle" onClick={toggleChat}>
         💬
       </button>
       {isOpen && (
-        <div className="chat-window">
+        <div className={`chat-window ${isOpen ? "open" : ""}`}>
           <div className="chat-header">
-            <h5>Chat with Us</h5>
+            <h6>Chat with Digital me!</h6>
             <button className="close-chat" onClick={toggleChat}>×</button>
           </div>
           <div className="chat-messages">
@@ -64,12 +72,14 @@ function FloatingChat() {
                 {msg.text}
               </div>
             ))}
+            <div ref={messagesEndRef} />
           </div>
           <div className="chat-input">
             <input
               type="text"
               value={input}
               onChange={handleInputChange}
+              onKeyPress={handleKeyPress}
               placeholder="Type a message..."
             />
             <button onClick={sendMessage}>Send</button>
