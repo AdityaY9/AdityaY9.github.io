@@ -31,7 +31,12 @@ function FloatingChat() {
       setInput("");
 
       try {
-        const response = await axios.post("/api/generate-content", { prompt: input });
+        // Send the user's prompt and User-Agent to the server
+        const response = await axios.post("/api/generate-content", { 
+          prompt: input,
+          userAgent: navigator.userAgent // Send the User-Agent string
+        });
+
         setMessages((prevMessages) => [
           ...prevMessages,
           { sender: "bot", text: response.data.response },

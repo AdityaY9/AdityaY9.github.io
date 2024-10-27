@@ -7318,6 +7318,13 @@ no-case@^3.0.4:
     lower-case "^2.0.2"
     tslib "^2.0.3"
 
+node-device-detector@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.npmjs.org/node-device-detector/-/node-device-detector-2.1.5.tgz"
+  integrity sha512-5rfN1jK+CQkIRZtHByJ5NnxEZnGbkucdYdHsZ4EuWA60Ecf4qSm4wWUSfwWnx4XjyGEw0zIso461uSHh+V6r4w==
+  dependencies:
+    js-yaml "^4.1.0"
+
 node-fetch@^2.6.9:
   version "2.7.0"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz"
