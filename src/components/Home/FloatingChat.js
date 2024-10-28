@@ -1,4 +1,3 @@
-// FloatingChat.js
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import "./FloatingChat.css";
@@ -9,7 +8,9 @@ function FloatingChat() {
     { sender: "bot", text: "Welcome to my website! Hope it helps you get to know me better." },
   ]);
   const [input, setInput] = useState("");
+  const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
+  const typingInterval = useRef(null);
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
@@ -25,21 +26,41 @@ function FloatingChat() {
     }
   };
 
+  const startTypingEffect = () => {
+    // Simulate human-like typing effect
+    typingInterval.current = setInterval(() => {
+      setIsTyping((prev) => !prev);
+    }, 500); // Change typing state every 500ms to simulate intermittent typing
+  };
+
+  const stopTypingEffect = () => {
+    clearInterval(typingInterval.current);
+    setIsTyping(false); // Ensure typing indicator stops
+  };
+
   const sendMessage = async () => {
     if (input.trim()) {
       const newMessages = [...messages, { sender: "user", text: input }];
       setMessages(newMessages);
       setInput("");
 
+      // Start the typing effect
+      startTypingEffect();
+
       try {
-        // Send the user's prompt to the server
         const response = await axios.post("/api/generate-content", { prompt: input });
+
+        // Stop typing effect and show bot response
+        stopTypingEffect();
         setMessages((prevMessages) => [
           ...prevMessages,
           { sender: "bot", text: response.data.response },
         ]);
       } catch (error) {
         console.error("Error getting response from server:", error);
+
+        // Stop typing effect and show error message
+        stopTypingEffect();
         setMessages((prevMessages) => [
           ...prevMessages,
           { sender: "bot", text: "There was an error getting a response. Please try again." },
@@ -52,7 +73,7 @@ function FloatingChat() {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [messages]);
+  }, [messages, isTyping]);
 
   return (
     <div className="floating-chat">
@@ -74,6 +95,13 @@ function FloatingChat() {
                 {msg.text}
               </div>
             ))}
+            {isTyping && (
+              <div className="chat-message bot typing-indicator">
+                <span className="dot"></span>
+                <span className="dot"></span>
+                <span className="dot"></span>
+              </div>
+            )}
             <div ref={messagesEndRef} />
           </div>
           <div className="chat-input">
