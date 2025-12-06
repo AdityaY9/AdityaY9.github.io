@@ -2,6 +2,9 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import admin from "firebase-admin";
 import UAParser from "ua-parser-js";
+import dotenv from "dotenv";
+dotenv.config();
+
 
 if (!admin.apps.length) {
   const credentials = JSON.parse(process.env.FIREBASE_CREDENTIALS); // Read credentials from .env.local
@@ -11,7 +14,9 @@ if (!admin.apps.length) {
 }
 const db = admin.firestore();
 
-const genAI = new GoogleGenerativeAI("AIzaSyDjYQJK41A58l0gE6JaBgx1sVEZcPatoBA");
+const genAI = new GoogleGenerativeAI({
+  apiKey: process.env.GEMINI_API_KEY,
+});
 
 // Detailed information about Aditya
 const personalInfo = `
